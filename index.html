@@ -86,10 +86,28 @@
       <li><a href="https://twitter.com/dani_viga">Twitter</a></li>
       <li><a href="https://linkedin.com/in/daniviga">LinkedIn</a></li>
       <li><a href="https://github.com/daniviga">GitHub</a></li>
-      <li><a href="https://copr.fedoraproject.org/coprs/dani/">Fedora Linux stuff</li>
-      <li><a href="/hobbies.html">Hobbies</a></li>
+      <li><a href="https://copr.fedoraproject.org/coprs/dani/">Fedora Linux stuff</a></li>
+    </ul>
+    <p>$&gt; ls <a href="#" onClick="showHobbies()">Hobbies</a> <span id="main-cursor" class="cursor"></span></p>
+    <div style="display: none;" id="hobbies">
+    <ul>
+      <li><a href="https://daniele.mynarrowgauge.org/">Railroad Assets Manager</li>
+      <li><a href="https://www.mynarrowgauge.org/">My Narrow Gauge (by Sandro &amp; Daniele)</a></li>
     </ul>
     <p>$&gt; <span class="cursor"></span></p>
+    </div>
   </div>
+  <script>
+  addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      showHobbies();
+    }
+  });
+  function showHobbies() {
+    document.getElementById("hobbies").style.display = "block";
+    document.getElementById("main-cursor").style.display = "none";
+  }
+  </script>
   </body>
 </html>
